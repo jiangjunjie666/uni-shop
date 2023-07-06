@@ -1,5 +1,7 @@
 <template>
 	<view>
+		<!-- <my-search :bgcolor="'pink'" :radius="3"></my-search> -->
+		<my-search @click="gotoSearch"></my-search>
 		<view class="scroll-view-container">
 			<!-- 左侧的滚动视图区域 -->
 			<scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -14,7 +16,8 @@
 					<view class="cate_lv2_title">/ {{item2.cat_name}} /</view>
 					<!-- 三级分类 -->
 					<view class="cate_lv3_list">
-						<view class="cate-lv3-item" v-for="(item3,index) in item2.children" :key="index" @click="gotoGoodsList(item3)">
+						<view class="cate-lv3-item" v-for="(item3,index) in item2.children" :key="index"
+							@click="gotoGoodsList(item3)">
 							<image :src="item3.cat_icon"></image>
 							<text>{{item3.cat_name}}</text>
 						</view>
@@ -33,12 +36,12 @@
 				cateList: [],
 				active: 0,
 				cateLevel2: [],
-				scrollTop:0
+				scrollTop: 0
 			};
 		},
 		onLoad() {
 			const sysInfo = uni.getSystemInfoSync() //获取设备的信息
-			this.wh = sysInfo.windowHeight //设置高度达到自适应的效果
+			this.wh = sysInfo.windowHeight - 50 //设置高度达到自适应的效果
 			this.getCateList()
 		},
 		methods: {
@@ -55,9 +58,14 @@
 				this.cateLevel2 = this.cateList[index].children
 				this.scrollTop = this.scrollTop === 0 ? 1 : 0
 			},
-			gotoGoodsList(item3){
+			gotoGoodsList(item3) {
 				uni.navigateTo({
-					url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+					url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+				})
+			},
+			gotoSearch() {
+				uni.navigateTo({
+					url: '/subpkg/search/search'
 				})
 			}
 		},
@@ -103,21 +111,25 @@
 		text-align: center;
 		padding: 15px 0;
 	}
-	.cate_lv3_list{
-		display:flex;
+
+	.cate_lv3_list {
+		display: flex;
 		flex-wrap: wrap;
-		.cate-lv3-item{
+
+		.cate-lv3-item {
 			width: 33.33%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			margin-bottom: 10px;
-			image{
+
+			image {
 				width: 60px;
 				height: 60px;
 			}
-			text{
+
+			text {
 				font-size: 12px;
 			}
 		}
