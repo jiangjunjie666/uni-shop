@@ -3,7 +3,7 @@
             "path" : "pages/home/home",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "黑马优购",
                 "enablePullDownRefresh": false
             }
             
@@ -12,7 +12,7 @@
             "path" : "pages/cate/cate",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "黑马优购",
                 "enablePullDownRefresh": false
             }
             
@@ -21,7 +21,7 @@
             "path" : "pages/cart/cart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "黑马优购",
                 "enablePullDownRefresh": false
             }
             
@@ -30,7 +30,7 @@
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "黑马优购",
                 "enablePullDownRefresh": false
             }
             
@@ -45,7 +45,7 @@
                     "path" : "goods_detail/goods_detail",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    "navigationBarTitleText": "黑马优购",
                     "enablePullDownRefresh": false
                 }
                 
@@ -54,7 +54,7 @@
                     "path" : "goods_list/goods_list",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    "navigationBarTitleText": "黑马优购",
 					"onReachBottomDistance": 150,
                     "enablePullDownRefresh": true,
 					"backgroundColor": "#f8f8f8"
@@ -65,7 +65,7 @@
                     "path" : "search/search",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    "navigationBarTitleText": "黑马优购",
                     "enablePullDownRefresh": false
                 }
                 
