@@ -46,7 +46,9 @@
 </template>
 
 <script>
+	import badgeMix from '@/mixins/tabbar-badge.js'
 	export default {
+		mixins: [badgeMix],
 		data() {
 			return {
 				swiperList: [],
@@ -148,10 +150,10 @@
 		display: flex;
 		padding-left: 10rpx;
 	}
-		
-	.search-box{
+
+	.search-box {
 		position: sticky;
-		top:0;
+		top: 0;
 		z-index: 99;
 	}
 </style>
